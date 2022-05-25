@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:layout_marginTop="-5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:fontFamily="monospace"
+            android:visibility="gone"
+            android:id="@+id/hur"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textAlignment="center"
+            android:textSize="35sp" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/d1"
+            android:text=":"
+            android:textSize="40sp" />
+
+        <TextView
+            android:fontFamily="monospace"
+            android:id="@+id/min"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textAlignment="center"
+            android:textSize="35sp" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/d2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="40sp" />
+
+        <TextView
+            android:fontFamily="monospace"
+            android:id="@+id/sec"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textAlignment="center"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:id="@+id/msec"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="00"
+
+            android:textColor="#918080"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playpausebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#11BCDA"
+        android:backgroundTint="#1542E8"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.429"
+        app:srcCompat="@drawable/ic_play"
+        android:contentDescription="start"
+        android:focusable="true" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="347dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.269">
+
+        <LinearLayout
+            android:id="@+id/lapbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.0" />
+    </ScrollView>
+
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/stop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toEndOf="@+id/playpausebtn"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.437"
+       />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/lapbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/playpausebtn"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintVertical_bias="0.429"
+        app:srcCompat="@drawable/ic_pin" />
+</androidx.constraintlayout.widget.ConstraintLayout>
